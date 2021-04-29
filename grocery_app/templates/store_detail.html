@@ -4,6 +4,7 @@
 <h1>Store - {{ store.title }}</h1>
 
 <strong>Address:</strong> {{ store.address }}
+<p><strong>Created by: {{ store.created_by.username }}</strong></p>
 
 <h2>Items</h2>
 
@@ -13,6 +14,7 @@
         <a href="/item/{{ item.id }}"><img src="{{ item.photo_url }}" alt="{{ item.name }}" width="200px">
         <p><strong>{{ item.name }}</strong></p></a>
         <p><strong>Price: ${{ item.price }}</strong></p>
+        <p><strong>Created by: {{ item.created_by.username }}</strong></p>
     </div>
     {% endfor %}
 </div>
